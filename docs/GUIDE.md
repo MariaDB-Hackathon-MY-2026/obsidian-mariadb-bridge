@@ -28,7 +28,7 @@ Follow these 6 steps to bridge your local knowledge vault with our neural search
 Clone the project repository to your local machine:
 ```bash
 git clone https://github.com/MariaDB-Hackathon-MY-2026/obsidian-mariadb-bridge.git
-cd VectorSYNC
+cd obsidian-mariadb-bridge
 ```
 **Prerequisites:**
 - **Docker Desktop:** For hosting the MariaDB Vector database.
@@ -39,7 +39,7 @@ cd VectorSYNC
 Ensure you are in the root directory of the project.
 ```bash
 # Example for Windows
-cd C:\Users\YourName\Documents\VectorSYNC
+cd C:\Users\YourName\Documents\obsidian-mariadb-bridge
 ```
 
 ### Step 3: Spin Up MariaDB Vector
