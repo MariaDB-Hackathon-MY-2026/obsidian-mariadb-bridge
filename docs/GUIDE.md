@@ -27,7 +27,7 @@ Follow these 6 steps to bridge your local knowledge vault with our neural search
 ### Step 1: Clone and Requirements
 Clone the project repository to your local machine:
 ```bash
-git clone https://github.com/MariaDB-Hackathon-MY-2026/VectorSYNC.git
+git clone https://github.com/MariaDB-Hackathon-MY-2026/obsidian-mariadb-bridge.git
 cd VectorSYNC
 ```
 **Prerequisites:**
