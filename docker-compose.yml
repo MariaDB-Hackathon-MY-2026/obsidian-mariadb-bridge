@@ -1,0 +1,13 @@
+services:
+  mariadb:
+    image: mariadb:11.8
+    container_name: obsidian_vector_db
+    environment:
+      MARIADB_ROOT_PASSWORD: password123 
+      MARIADB_DATABASE: obsidian_sync
+    ports:
+      - "3306:3306"
+    volumes:
+      - mariadb_data:/var/lib/mysql
+volumes:
+  mariadb_data:

@@ -1,0 +1,6 @@
+{
+  "name": "VectorSYNC",
+  "description": "A local-first vector search engine for Obsidian vaults using MariaDB 11.8+ VECTOR support.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}
