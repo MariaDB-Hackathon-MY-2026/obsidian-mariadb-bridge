@@ -1,0 +1,114 @@
+/* Last Sync: 2026-04-29T12:43:00Z */
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --color-sleek-bg: var(--bg-val, #1e1e1e);
+  --color-sleek-header: var(--header-val, #171717);
+  --color-sleek-accent: #7c63ff;
+  --color-sleek-text: var(--text-val, #dcdcdc);
+  --color-sleek-muted: var(--muted-val, #888888);
+  --color-sleek-border: var(--border-val, rgba(255, 255, 255, 0.05));
+  --color-sleek-card: var(--card-val, rgba(255, 255, 255, 0.02));
+  --color-sleek-glass: var(--glass-val, rgba(32, 32, 32, 0.6));
+}
+
+@layer base {
+  :root {
+    --bg-val: #1e1e1e;
+    --header-val: #171717;
+    --text-val: #dcdcdc;
+    --muted-val: #888888;
+    --border-val: rgba(255, 255, 255, 0.08);
+    --card-val: rgba(255, 255, 255, 0.02);
+    --glass-val: rgba(32, 32, 32, 0.6);
+  }
+
+  :root.light {
+    --bg-val: #fcfaf7;
+    --header-val: #fdfdfc;
+    --text-val: #2d2d2b;
+    --muted-val: #7e7e7a;
+    --border-val: rgba(0, 0, 0, 0.06);
+    --card-val: rgba(0, 0, 0, 0.02);
+    --glass-val: rgba(253, 250, 247, 0.85);
+  }
+
+  body {
+    @apply bg-sleek-bg text-sleek-text font-sans antialiased transition-colors duration-300;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+}
+
+.glass {
+  background: var(--color-sleek-glass);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.status-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.markdown-body {
+  @apply space-y-6 text-slate-300 transition-colors duration-300;
+}
+
+.markdown-body h1 { @apply text-3xl font-bold text-sleek-accent mb-6; }
+.markdown-body h2 { @apply text-2xl font-bold text-sleek-accent mb-4 mt-8; }
+.markdown-body h3 { @apply text-xl font-bold text-sleek-accent mb-4 mt-6; }
+.markdown-body p { @apply text-sm leading-relaxed mb-4 text-slate-400; }
+.markdown-body ul { @apply list-disc list-inside mb-4 space-y-2; }
+.markdown-body ol { @apply list-decimal list-inside mb-4 space-y-2; }
+.markdown-body li { @apply text-sm text-slate-400; }
+.markdown-body code { @apply font-mono text-xs bg-white/5 px-1.5 py-0.5 rounded text-sleek-accent; }
+.markdown-body pre { @apply bg-black/40 p-4 rounded-2xl border border-white/5 overflow-x-auto mb-6 my-4; }
+.markdown-body pre code { @apply bg-transparent p-0 text-slate-300 block; }
+.markdown-body blockquote { @apply border-l-4 border-sleek-accent pl-6 italic text-slate-500 mb-6; }
+.markdown-body a { @apply text-sleek-accent hover:underline; }
+.markdown-body hr { @apply border-t border-white/10 my-8; }
+.markdown-body table { @apply w-full border-collapse mb-6; }
+.markdown-body th { @apply border border-white/10 p-3 bg-white/5 font-bold text-left text-xs; }
+.markdown-body td { @apply border border-white/10 p-3 text-xs text-slate-400; }
+
+:root.light .markdown-body {
+  @apply text-slate-700;
+}
+:root.light .markdown-body p, :root.light .markdown-body li, :root.light .markdown-body td {
+  @apply text-slate-600;
+}
+:root.light .markdown-body code {
+  @apply bg-sleek-accent/5;
+}
+:root.light .markdown-body pre {
+  @apply bg-slate-50 border-black/5;
+}
+:root.light .markdown-body pre code {
+  @apply text-slate-700;
+}
+:root.light .markdown-body th {
+  @apply bg-black/5 border-black/10;
+}
+:root.light .markdown-body td {
+  @apply border-black/10;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}

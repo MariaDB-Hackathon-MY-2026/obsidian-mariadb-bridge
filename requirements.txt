@@ -1,0 +1,5 @@
+mariadb
+watchdog
+sentence-transformers
+torch
+numpy
