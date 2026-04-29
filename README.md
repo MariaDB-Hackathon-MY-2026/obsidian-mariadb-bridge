@@ -70,7 +70,7 @@ graph TD
 For a detailed walkthrough, including Docker configuration and troubleshooting, see the [Full Implementation Guide](docs/GUIDE.md).
 
 1. **Clone:** `git clone https://github.com/MariaDB-Hackathon-MY-2026/obsidian-mariadb-bridge.git`
-2. **Path:** `cd VectorSYNC`
+2. **Path:** `cd obsidian-mariadb-bridge`
 3. **Database:** `docker-compose up -d` (Requires Docker Desktop)
 4. **Cortex:** `pip install -r requirements.txt && python engine/main.py`
 5. **Interface:** `npm install && npm run dev`
